@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  max-width: 700px;
+  padding: 40px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  opacity: 0;
+  animation: textFade 2s ease-in forwards;
+  animation-delay: 4s;
+  display: none;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textFade {
+  to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="your-song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>For You, My Love ✨</h1>
+
+  <button onclick="showLetter()">Open</button>
+
+  <p id="letter">
+    I don’t know how to explain what you make me feel.  
+    But every word here is written with my heart shaking a little.  
+    If love could speak quietly, it would sound like this…  
+    <br><br>
+    Yours, always 🤍
+  </p>
+</div>
+
+<script>
+function showLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
